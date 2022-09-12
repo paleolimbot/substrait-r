@@ -51,15 +51,7 @@
 <span>  as_data_frame <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">has_duckdb_with_substrait</span><span class="op">(</span>lib <span class="op">=</span> <span class="fu">duckdb_with_substrait_lib_dir</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">install_duckdb_with_substrait</span><span class="op">(</span></span>
-<span>  lib <span class="op">=</span> <span class="fu">duckdb_with_substrait_lib_dir</span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  force <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  quiet <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">duckdb_with_substrait_lib_dir</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">has_duckdb_with_substrait</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -84,14 +76,6 @@
 <dd><p>Use <code>FALSE</code> to return an <a href="https://arrow.apache.org/docs/r/reference/Table.html" class="external-link">arrow::Table</a> instead of a
 data.frame.</p></dd>
 
-
-<dt>lib</dt>
-<dd><p>A directry where the custom duckdb will be installed</p></dd>
-
-
-<dt>force, quiet</dt>
-<dd><p>Passed to the remotes installer</p></dd>
-
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -103,14 +87,19 @@ data.frame.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># has_duckdb_with_substrait()</span></span></span>
-<span class="r-in"><span><span class="va">plan</span> <span class="op">&lt;-</span> <span class="fu">duckdb_get_substrait</span><span class="op">(</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">plan</span> <span class="op">&lt;-</span> <span class="fu">duckdb_get_substrait</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="st">"SELECT * from mtcars WHERE mpg &gt; 30"</span>,</span></span>
 <span class="r-in"><span>  tables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>mtcars <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">duckdb_from_substrait</span><span class="op">(</span><span class="va">plan</span>, tables <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>mtcars <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 4 × 11</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>  32.4     4  78.7    66  4.08  2.2   19.5     1     1     4     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span>  30.4     4  75.7    52  4.93  1.62  18.5     1     1     4     2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span>  33.9     4  71.1    65  4.22  1.84  19.9     1     1     4     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span>  30.4     4  95.1   113  3.77  1.51  16.9     1     1     5     2</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

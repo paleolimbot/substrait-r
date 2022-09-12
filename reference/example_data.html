@@ -42,111 +42,31 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">example_data</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="va">example_data</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
     <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 10 rows and 9 columns.</p>
     </div>
-    <div class="section level2">
-    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Currently generated via:
-example_data &lt;- tibble::tibble(
-int = c(-3212L, 2L, 3L, NA_integer_, 5L, 6L, 7L, 8L, 9L,
-3212L),
-dbl = c(-999, -99, -9, 0,
-9, pi, 99, 10000, 10000, NA_real_),
-dbl2 = c(-Inf, 5, 5, 5, 5, 5, 5, 5, 5, 5),
-lgl = c(NA, TRUE, NA, TRUE, FALSE, FALSE, NA, TRUE, FALSE, TRUE),
-false = c(FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE),
-chr = c("a", "b", "c", "d", "e", NA, "g", "h", "i", "j"),
-verses = c("Por cada muro, un lamento", "En Jerusalén la dorada",
-"Y mil vidas malgastadas", "Por cada mandamiento", "Yo soy polvo de tu viento",
-"Y aunque sangro de tu herida", "Y cada piedra querida",
-"Guarda mi amor más profundo", "No hay una piedra en el mundo",
-"Que valga lo que una vida"),
-padded_strings = c(" a ", "  b  ",
-"   c   ", "    d    ", "     e     ", "      f      ", "       g       ",
-"        h        ", "         i         ", "          j          "),
-some_negative = c(-1, 2, -3, NA, -5, 6, -7, 8, -9, 10)#,</p>
-    </div>
-    <div class="section level2">
-    <h2 id="https-github-com-voltrondata-substrait-r-issues-">https://github.com/voltrondata/substrait-r/issues/80<a class="anchor" aria-label="anchor" href="#https-github-com-voltrondata-substrait-r-issues-"></a></h2>
-    
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="dttm-lubridate-ymd-hms-c-">dttm = lubridate::ymd_hms(c(<a class="anchor" aria-label="anchor" href="#dttm-lubridate-ymd-hms-c-"></a></h2>
-    
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="-">"0000-01-01 00:00:00",<a class="anchor" aria-label="anchor" href="#-"></a></h2>
-    
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="--1">"1919-05-29 13:08:55",<a class="anchor" aria-label="anchor" href="#--1"></a></h2>
-    
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="--2">"1955-06-20 04:10:42",<a class="anchor" aria-label="anchor" href="#--2"></a></h2>
-    
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="--3">"1973-06-30 11:38:41",<a class="anchor" aria-label="anchor" href="#--3"></a></h2>
-    
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="--4">"1987-03-29 12:49:47",<a class="anchor" aria-label="anchor" href="#--4"></a></h2>
-    
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="--5">"1991-06-11 19:07:01",<a class="anchor" aria-label="anchor" href="#--5"></a></h2>
-    
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="na-character-">NA_character_,<a class="anchor" aria-label="anchor" href="#na-character-"></a></h2>
-    
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="--6">"2017-08-21 18:26:40",<a class="anchor" aria-label="anchor" href="#--6"></a></h2>
-    
-
-
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="--7">"9999-12-31 23:59:59"<a class="anchor" aria-label="anchor" href="#--7"></a></h2>
-    
-
-
-    </div>
-    <div class="section level2">
-    <h2 id="--8">))<a class="anchor" aria-label="anchor" href="#--8"></a></h2>
-    <p>)</p>
-    </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">example_data</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">example_data</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 9</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      int      dbl  dbl2 lgl   false chr   verses                 padde…¹ some_…²</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> -<span style="color: #BB0000; text-decoration: underline;">3</span><span style="color: #BB0000;">212</span>  -<span style="color: #BB0000;">999</span>     -<span style="color: #BB0000;">Inf</span> <span style="color: #BB0000;">NA</span>    FALSE a     Por cada muro, un lam… <span style="color: #949494;">"</span> a <span style="color: #949494;">"</span>        -<span style="color: #BB0000;">1</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>     2   -<span style="color: #BB0000;">99</span>        5 TRUE  FALSE b     En Jerusalén la dorada <span style="color: #949494;">"</span>  b  <span style="color: #949494;">"</span>       2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>     3    -<span style="color: #BB0000;">9</span>        5 <span style="color: #BB0000;">NA</span>    FALSE c     Y mil vidas malgastad… <span style="color: #949494;">"</span>   c …      -<span style="color: #BB0000;">3</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>    <span style="color: #BB0000;">NA</span>     0        5 TRUE  FALSE d     Por cada mandamiento   <span style="color: #949494;">"</span>    d…      <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>     5     9        5 FALSE FALSE e     Yo soy polvo de tu vi… <span style="color: #949494;">"</span>     …      -<span style="color: #BB0000;">5</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>     6     3.14     5 FALSE FALSE <span style="color: #BB0000;">NA</span>    Y aunque sangro de tu… <span style="color: #949494;">"</span>     …       6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>     7    99        5 <span style="color: #BB0000;">NA</span>    FALSE g     Y cada piedra querida  <span style="color: #949494;">"</span>     …      -<span style="color: #BB0000;">7</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>     8 <span style="text-decoration: underline;">10</span>000        5 TRUE  FALSE h     Guarda mi amor más pr… <span style="color: #949494;">"</span>     …       8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>     9 <span style="text-decoration: underline;">10</span>000        5 FALSE FALSE i     No hay una piedra en … <span style="color: #949494;">"</span>     …      -<span style="color: #BB0000;">9</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>  <span style="text-decoration: underline;">3</span>212    <span style="color: #BB0000;">NA</span>        5 TRUE  FALSE j     Que valga lo que una … <span style="color: #949494;">"</span>     …      10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with abbreviated variable names ¹​padded_strings, ²​some_negative</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
